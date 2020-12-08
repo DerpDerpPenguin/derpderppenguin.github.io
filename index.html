@@ -7,17 +7,55 @@
     <meta name="description" content="The Land of the Mad Shibe">
     <title>Doge Based Madness</title>
 
+    <style>
+    body {
+      background-image: url('img/backdrop.gif');
+      background-repeat: repeat;
+      background-size: 100% 100%;
+      -webkit-background-size: 100% auto;
+      -moz-background-size: 100% auto;
+      -o-background-size: 100% auto;
+      background-size: 50% auto;
+    }
+    </style>
+
   </head>
 
   <body style="background-color:lightblue;">
 
+    <audio id="myAudio" src="mp3/track_3.mp3" preload="auto" autoplay></audio>
+    <a onclick="togglePlay()" style="color: #ff9933; position: absolute;">Click for Shibe Beatz.</a>
+
+    <script type="text/javascript">
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
+    myAudio.play();
+
+    function togglePlay() {
+      if (isPlaying) {
+        myAudio.pause()
+      } else {
+        myAudio.play();
+      }
+    };
+    myAudio.onplaying = function() {
+      isPlaying = true;
+    };
+    myAudio.onpause = function() {
+      isPlaying = false;
+    };
+    </script>
+
+
+
     <header>
-      <h1 style="color: grey;">Doge Based Madness</h1>
+      <br>
+      <h1 style="color: white;">Doge Based Madness</h1>
       <hr/>
-      <h2>Page 1</h2>
+      <h2 style="color: white">Page 1</h2>
       <ul>
-        <li><a href="Pages/Page2.html">Page 2</a></li>
-        <li><a href="Pages/Page3.html">Page 3</a></li>
+        <li><a href="Pages/Page2.html" style="color: lightblue;">Page 2</a></li>
+        <li><a href="Pages/Page3.html" style="color: lightblue;">Page 3</a></li>
       </ul>
       <hr>
       <img width="250" src="Img/welcome.gif" alt="Img/welcome.gif">
@@ -27,17 +65,17 @@
     <main>
 
       <section>
-        <p><big>Temporary <b><i>Paragraph</i></b> Words</big></p>
-        <p>Middle Size Paragraph</p>
-        <p><small>Paragraph <i>Numero Dos</i></small></p>
+        <p style="color: white;"><big>Temporary <b><i>Paragraph</i></b> Words</big></p>
+        <p style="color: white;">Middle Size Paragraph</p>
+        <p style="color: white;"><small>Paragraph <i>Numero Dos</i></small></p>
         <hr/>
       </section>
 
-      <section>
+      <section style="color: white;">
         <p><big><b><i>LINKS</i></b></big></p>
         <ul>
-          <li><a href="Img/dogespin.gif">Mr.Spinner</a></li>
-          <li><a href="https://www.icosahedron.tk/" target="_blank">Icosahedron</a></li>
+          <li><a href="Img/dogespin.gif" style="color: white;">Mr.Spinner</a></li>
+          <li><a href="https://www.icosahedron.tk/" target="_blank" style="color: white;">Icosahedron</a></li>
         </ul>
       </section>
 
@@ -45,7 +83,7 @@
 
     <footer>
       <!-- H20 / 10(Squared) -->
-      <p style="color: blue;">H<sub>2</sub>0 / 10<sup>2</sup></p>
+      <p style="color: lightblue;">H<sub>2</sub>0 / 10<sup>2</sup></p>
     </footer>
 
   </body>
